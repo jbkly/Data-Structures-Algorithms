@@ -1,0 +1,19 @@
+{
+  "name": "data-structures-algorithms",
+  "version": "0.0.1",
+  "description": "Data structures and algorithms in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbkly/Data-Structures-Algorithms.git"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jbkly/Data-Structures-Algorithms/issues"
+  },
+  "homepage": "https://github.com/jbkly/Data-Structures-Algorithms#readme"
+}
