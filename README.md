@@ -1,5 +1,7 @@
 # Data Structures & Algorithms
-Data structures and algorithms in JavaScript
+Data structures and algorithms in JavaScript. 
+
+`yarn test` or `npm t` to run Jest tests.
 
 ## Contents
 ### Data Structures
