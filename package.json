@@ -4,7 +4,7 @@
   "description": "Data structures and algorithms in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --logHeapUsage --verbose --watch"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/jbkly/Data-Structures-Algorithms/issues"
   },
-  "homepage": "https://github.com/jbkly/Data-Structures-Algorithms#readme"
+  "homepage": "https://github.com/jbkly/Data-Structures-Algorithms#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "babel-jest": "^24.8.0",
+    "jest": "24.8.0"
+  }
 }
