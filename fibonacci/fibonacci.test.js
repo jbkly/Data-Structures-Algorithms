@@ -26,9 +26,6 @@ const expectations = new Map([
   // beyond 40, the naive recursive implemenation gets really slow
 ]);
 
-// todo: add timeout using node to kill process?
-// todo: add timing results
-
 Object.values(fibFunctions).forEach(fn => {
   describe(fn.name, () => {
     expectations.forEach((result, input) => {
