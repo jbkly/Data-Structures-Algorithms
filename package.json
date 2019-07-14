@@ -4,7 +4,7 @@
   "description": "Data structures and algorithms in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --logHeapUsage --verbose --watch"
   },
   "repository": {
     "type": "git",

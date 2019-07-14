@@ -44,6 +44,9 @@ export function fibIterative2(n) {
 }
 
 // using binet's formula:
-// export function fibClosedForm(n) {
-//   const sqrt5 = Math.sqrt(5);
-// }
+// Fn = {[(√5 + 1)/2] ^ n} / √5
+export function fibClosedForm(n) {
+  const sqrt5 = Math.sqrt(5);
+  const phi = (1 + sqrt5) / 2;
+  return Math.round(Math.pow(phi, n) / sqrt5);
+}
