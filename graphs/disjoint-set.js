@@ -34,6 +34,11 @@
     - parents: int array `id` of size n, value at `id[i]` is the parent of i
     - size: int array of size n, value at `size[i]` is the size of the set rooted at i
     - rank: same as size but for rank
+
+    Resources:
+    * https://en.wikipedia.org/wiki/Disjoint-set_data_structure
+    * https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf
+    * https://algs4.cs.princeton.edu/15uf/
   */
 
 export default class DisjointSet {
