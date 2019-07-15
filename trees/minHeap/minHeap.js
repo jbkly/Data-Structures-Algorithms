@@ -29,6 +29,9 @@
   index 0 is the root. For each element at index i,
   its children are at indices 2i + 1 and 2i + 2
   its parent is at index Math.floor((i − 1) ∕ 2)
+
+  Resource:
+  * https://en.wikipedia.org/wiki/Binary_heap
 */
 
 export default class minHeap {

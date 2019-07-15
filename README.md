@@ -5,11 +5,13 @@ Data structures and algorithms in JavaScript.
 
 ## Contents
 ### Data Structures
+#### Graphs
+* [Disjoint-set/Union-find](graphs/disjoint-set.js)
 #### Trees
-* Disjoint-set/Union-find 
+* [Binary heap (min-heap)](trees/minHeap)
 
 ### Algorithms
-* Fibonacci sequence
+* [Fibonacci sequence](fibonacci)
 
 ## Roadmap
 * tests 🚧
