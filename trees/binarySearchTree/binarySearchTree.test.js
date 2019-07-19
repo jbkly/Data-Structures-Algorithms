@@ -1,4 +1,4 @@
-import binarySearchTree, { TreeNode } from './binarySearchTree';
+import binarySearchTree, { Node } from './binarySearchTree';
 
 // recursive check
 function isBST(node, min = -Infinity, max = Infinity) {
@@ -21,7 +21,7 @@ beforeEach(() => {
 
 describe('is a binary search tree', () => {
   test('satisfies binary search property recursively', () => {
-    const rootNode = bst.getRoot();
+    const rootNode = bst.root;
     expect(isBST(rootNode)).toBe(true);
   });
 
@@ -39,7 +39,7 @@ describe('find', () => {
   test('should find elements', () => {
     const result = bst.find(3);
     expect(result).toBeDefined();
-    expect(result).toBeInstanceOf(TreeNode);
+    expect(result).toBeInstanceOf(Node);
     expect(result.data).toBe(3);
   });
 
@@ -54,7 +54,7 @@ describe('insert', () => {
     expect(bst.find(12)).toBeNull();
     bst.insert(12);
     const result = bst.find(12);
-    expect(result).toBeInstanceOf(TreeNode);
+    expect(result).toBeInstanceOf(Node);
     expect(result.data).toBe(12);
   });
 });
