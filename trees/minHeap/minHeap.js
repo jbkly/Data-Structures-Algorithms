@@ -101,7 +101,7 @@ export default class minHeap {
     }
   }
   minHeapify() {
-    const startIndex = Math.floor((this.heap.length - 1)/2);
+    const startIndex = Math.floor((this.heap.length - 1) / 2);
     for (let i = startIndex; i >= 0; i--) {
       this.heapifyDown(i);
     }
@@ -109,8 +109,9 @@ export default class minHeap {
   getMinChildIndex(i) {
     let leftChild = !this.hasLeftChild(i) ? Infinity : this.leftChild(i);
     let rightChild = !this.hasRightChild(i) ? Infinity : this.rightChild(i);
-    return leftChild > rightChild ?
-      this.getRightChildIndex(i) : this.getLeftChildIndex(i);
+    return leftChild > rightChild
+      ? this.getRightChildIndex(i)
+      : this.getLeftChildIndex(i);
   }
   getLeftChildIndex(i) {
     return 2 * i + 1;
@@ -131,7 +132,7 @@ export default class minHeap {
     return this.heap[this.getRightChildIndex(i)];
   }
   getParentIndex(i) {
-    return Math.floor((i - 1)/2)
+    return Math.floor((i - 1) / 2);
   }
   hasParent(i) {
     return this.getParentIndex(i) >= 0;

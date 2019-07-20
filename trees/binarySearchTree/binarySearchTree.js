@@ -25,7 +25,7 @@ export class Node {
 }
 
 export default class BinarySearchTree {
-  constructor(elements = []) { 
+  constructor(elements = []) {
     this.root = null;
     for (const item of elements) {
       this.insert(item);
@@ -41,7 +41,7 @@ export default class BinarySearchTree {
       this.root = new Node(data);
     } else {
       if (typeof data !== typeof this.root.data) {
-        throw "Can only add items of the same type to the binary search tree";
+        throw 'Can only add items of the same type to the binary search tree';
       }
       insertUtil(data, this.root);
     }
@@ -50,18 +50,23 @@ export default class BinarySearchTree {
     if (!node) return false;
     if (--node.count > 0) return true; // if multiple, just decrement
 
-    if (node.left && node.right) { // if node to be deleted has two children
+    if (node.left && node.right) {
+      // if node to be deleted has two children
       // get the inorder successor or predecessor
-      // randomly choose to keep tree flatter
-      const replacement = Math.random() < 0.5 ?
-        findMaxInSubTree(node.left) : findMinInSubTree(node.right);
+      // randomly choose successor or predecessor to keep tree flatter
+      const replacement =
+        Math.random() < 0.5
+          ? findMaxInSubTree(node.left)
+          : findMinInSubTree(node.right);
       node.data = replacement.data;
       this.remove(replacement.data, replacement);
-    } else if (node.left) { // if only one child, replace self with child
+    } else if (node.left) {
+      // if only one child, replace self with child
       replaceInParent(node, node.left);
     } else if (node.right) {
       replaceInParent(node, node.right);
-    } else { // if no child nodes, just remove and point parent to null
+    } else {
+      // if no child nodes, just remove and point parent to null
       replaceInParent(node, null);
     }
   }
@@ -70,7 +75,7 @@ export default class BinarySearchTree {
     if (!node) return array;
     this.traverseInorder(node.left, array);
     for (let i = 0; i < node.count; i++) {
-      array.push(node.data)
+      array.push(node.data);
     }
     this.traverseInorder(node.right, array);
     return array;
@@ -79,7 +84,7 @@ export default class BinarySearchTree {
   traversePreorder(node = this.root, array = []) {
     if (!node) return array;
     for (let i = 0; i < node.count; i++) {
-      array.push(node.data)
+      array.push(node.data);
     }
     this.traversePreorder(node.left, array);
     this.traversePreorder(node.right, array);
@@ -91,7 +96,7 @@ export default class BinarySearchTree {
     this.traversePostorder(node.left, array);
     this.traversePostorder(node.right, array);
     for (let i = 0; i < node.count; i++) {
-      array.push(node.data)
+      array.push(node.data);
     }
     return array;
   }
