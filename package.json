@@ -4,7 +4,8 @@
   "description": "Data structures and algorithms in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "jest --logHeapUsage --verbose --watch"
+    "test": "jest --logHeapUsage --verbose --watch",
+    "lint": "eslint src/*"
   },
   "repository": {
     "type": "git",
