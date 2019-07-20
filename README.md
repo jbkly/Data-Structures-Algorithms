@@ -10,16 +10,16 @@ Data structures and algorithms in JavaScript.
 
 #### Graphs
 
-- [Disjoint-set/Union-find](graphs/disjoint-set.js)
+- [Disjoint-set/Union-find](src/graphs/disjoint-set.js)
 
 #### Trees
 
-- [Binary search tree](trees/binarySearchTree)
-- [Binary heap (min-heap)](trees/minHeap)
+- [Binary search tree](src/trees/binarySearchTree)
+- [Binary heap (min-heap)](src/trees/minHeap)
 
 ### Algorithms
 
-- [Fibonacci sequence](fibonacci)
+- [Fibonacci sequence](src/fibonacci)
 
 ## Roadmap
 
