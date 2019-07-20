@@ -18,7 +18,10 @@ export function fibRecursiveNaive(n) {
 export function fibRecursiveCache(n, solved = new Map()) {
   if (n < 2) return n;
   if (solved.has(n)) return solved.get(n);
-  solved.set(n, fibRecursiveCache(n - 2, solved) + fibRecursiveCache(n - 1, solved));
+  solved.set(
+    n,
+    fibRecursiveCache(n - 2, solved) + fibRecursiveCache(n - 1, solved)
+  );
   return solved.get(n);
 }
 
@@ -34,7 +37,9 @@ export function fibIterative(n) {
 // iterative more space efficient - only keep the last two items in the series
 export function fibIterative2(n) {
   if (n < 2) return n;
-  let a = 0, b = 1, c;
+  let a = 0,
+    b = 1,
+    c;
   for (let i = 2; i <= n; i++) {
     c = a + b;
     a = b;

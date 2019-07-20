@@ -4,7 +4,8 @@
   "description": "Data structures and algorithms in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "jest --logHeapUsage --verbose --watch"
+    "test": "jest --logHeapUsage --verbose --watch",
+    "lint": "eslint src/*"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,13 @@
   "devDependencies": {
     "@babel/core": "^7.5.4",
     "@babel/preset-env": "^7.5.4",
+    "babel-eslint": "^10.0.2",
     "babel-jest": "^24.8.0",
-    "jest": "24.8.0"
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "24.8.0",
+    "prettier": "1.18.2"
   }
 }
