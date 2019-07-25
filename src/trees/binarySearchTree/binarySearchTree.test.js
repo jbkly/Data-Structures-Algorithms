@@ -1,4 +1,4 @@
-import binarySearchTree, { Node } from './binarySearchTree';
+import binarySearchTree, { Node } from './BinarySearchTree';
 
 // recursive check
 function isBST(node, min = -Infinity, max = Infinity) {
