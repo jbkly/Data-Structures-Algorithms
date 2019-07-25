@@ -34,7 +34,7 @@
   * https://en.wikipedia.org/wiki/Binary_heap
 */
 
-export default class minHeap {
+export default class MinHeap {
   /*
     Expects array of integers
   */
