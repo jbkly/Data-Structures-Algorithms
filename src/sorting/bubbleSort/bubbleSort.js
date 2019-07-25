@@ -72,3 +72,5 @@ export function optimizedBubbleSort(input = []) {
   } while (swapped);
   return input;
 }
+
+export default optimizedBubbleSort;

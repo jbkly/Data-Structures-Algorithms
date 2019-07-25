@@ -21,6 +21,10 @@ Data structures and algorithms in JavaScript.
 
 - [Fibonacci sequence](src/fibonacci)
 
+#### Sorting
+
+- [Bubble sort](src/sorting/bubbleSort)
+
 ## Roadmap
 
 - sorting algorithms
