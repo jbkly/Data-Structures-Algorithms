@@ -1,10 +1,10 @@
-import minHeap from './minHeap';
+import MinHeap from './MinHeap';
 
 let unsortedArray = [5, 2, 7, 4, 0, 1];
 let heap;
 
 beforeEach(() => {
-  heap = new minHeap(unsortedArray);
+  heap = new MinHeap(unsortedArray);
 });
 
 describe('creating heap from unsorted array', () => {
@@ -57,7 +57,7 @@ describe('pop', () => {
 describe('insert multiple items to empty heap', () => {
   let heap;
   beforeAll(() => {
-    heap = new minHeap();
+    heap = new MinHeap();
     heap.insertMultiple([5, 2, 7]);
   });
   test('after inserting multiple to empty heap', () => {
@@ -78,7 +78,7 @@ describe('insert multiple items to empty heap', () => {
 describe('insert multiple to existing heap', () => {
   let heap;
   beforeAll(() => {
-    heap = new minHeap([3, -3, 0]);
+    heap = new MinHeap([3, -3, 0]);
     heap.insertMultiple([0, -10, -20]);
   });
   test('after insert multiple to existing', () => {
