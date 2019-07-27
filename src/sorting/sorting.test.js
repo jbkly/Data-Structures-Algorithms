@@ -1,14 +1,43 @@
 import * as bubbleSortFunctions from './bubbleSort';
+import * as quickSortFunctions from './quickSort';
 
-const unsortedArray = [5, 2, -9, 5, 0, 0, 4, 67, -3, -11, 21];
-const sortedArray = [-11, -9, -3, 0, 0, 2, 4, 5, 5, 21, 67];
-const reversedArray = [67, 21, 5, 5, 4, 2, 0, 0, -3, -9, -11];
+const testCases = [
+  {
+    input: [-1, 1, 3, -4, 2, 8, -3, 6, 9, -5, 0, -2, 4, 7, 5],
+    expected: [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  },
+  {
+    input: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5],
+    expected: [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  },
+  {
+    input: [],
+    expected: [],
+  },
+  {
+    input: [0],
+    expected: [0],
+  },
+  {
+    input: [1],
+    expected: [1],
+  },
+  {
+    input: [1, 1, 1, 1],
+    expected: [1, 1, 1, 1],
+  },
+  {
+    input: [-1, -1, -1, -1],
+    expected: [-1, -1, -1, -1],
+  },
+];
 
 const testAllFunctions = sortFunctionsObj => {
   Object.values(sortFunctionsObj).forEach(sortFunction => {
     test(`${sortFunction.name} should sort the unsorted array`, () => {
-      [unsortedArray, reversedArray].forEach(arr => {
-        expect(sortFunction(arr)).toEqual(sortedArray);
+      testCases.forEach(testCase => {
+        const input = [...testCase.input]; // clone to avoid mutation
+        expect(sortFunction(input)).toEqual(testCase.expected);
       });
     });
   });
@@ -16,4 +45,8 @@ const testAllFunctions = sortFunctionsObj => {
 
 describe('Bubble sort', () => {
   testAllFunctions(bubbleSortFunctions);
+});
+
+describe('Quicksort', () => {
+  testAllFunctions(quickSortFunctions);
 });
