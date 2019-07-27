@@ -1,17 +1,16 @@
 /*
-Quicksort is an efficient and commonly used sorting algorithm.
-It is a recursive divide and conquer algorithm.
+  Quicksort is an efficient and commonly used sorting algorithm.
+  It is a recursive divide and conquer algorithm.
 
-1. choose a pivot element (could be middle element, or often median of first, 
-  last, and middle elements - ideally a something in the middle of the sort)
-2. Partitioning: move all elements less than the pivot before the pivot,
-  all elements greater than the pivot after the pivot.
-3. Recursively apply steps 1-2 to the two subarrays
-When the subarray is size 1 or 0, it is sorted.
+  1. choose a pivot element (could be middle element, or often median of first, 
+    last, and middle elements - ideally a something in the middle of the sort)
+  2. Partitioning: move all elements less than the pivot before the pivot,
+    all elements greater than the pivot after the pivot.
+  3. Recursively apply steps 1-2 to the two subarrays
+  When the subarray is size 1 or 0, it is sorted.
 
-Average time complexity: O(n log n)
-Worst case complexity: O(n^2)
-
+  Average time complexity: O(n log n)
+  Worst case complexity: O(n^2)
 */
 
 // sorts IN-PLACE: mutates the input array
@@ -77,11 +76,11 @@ function partition2(arr, low, high) {
 }
 
 /* 
-If there are duplicate items in the array, some swaps may be unnecessary.
-We can further optimize by keeping track of three subarrays:
-lower, higher, and equal to pivot.
-This version uses extra arrays to make it easier to follow, at the cost
-of additional space.
+  If there are duplicate items in the array, some swaps may be unnecessary.
+  We can further optimize by keeping track of three subarrays:
+  lower, higher, and equal to pivot.
+  This version uses extra arrays to make it easier to follow, at the cost
+  of additional space.
 */
 export function quickSort3(input = []) {
   if (input.length <= 1) return input;
@@ -111,8 +110,8 @@ function partition3(arr) {
 }
 
 /*
-Another optimization:
-When the number of elements is below some threshold (perhaps ten elements),
-switch to a non-recursive sorting algorithm such as insertion sort that performs
-fewer swaps on such small arrays.
+  Another optimization:
+  When the number of elements is below some threshold (perhaps ten elements),
+  switch to a non-recursive sorting algorithm such as insertion sort that performs
+  fewer swaps on such small arrays.
 */
